@@ -132,14 +132,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -193,6 +193,82 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tx.png">
+      <meta itemprop="name" content="赵文博">
+      <meta itemprop="description" content="踏上笨鸟先飞之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神奇之旅">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/" class="post-title-link" itemprop="url">python实验六</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-21 18:45:31 / 修改时间：18:59:20" itemprop="dateCreated datePublished" datetime="2021-10-21T18:45:31+08:00">2021-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

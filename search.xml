@@ -149,4 +149,19 @@
         <tag>分享</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python实验六</title>
+    <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
+    <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
 </search>
