@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2022.3.12碎碎念</title>
+    <url>/2022/03/12/2022-3-12%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
+    <content><![CDATA[<h1 id="愁"><a href="#愁" class="headerlink" title="愁"></a>愁</h1><h2 id="丑奴儿·书博山道中壁"><a href="#丑奴儿·书博山道中壁" class="headerlink" title="丑奴儿·书博山道中壁"></a>丑奴儿·书博山道中壁</h2><h3 id="辛弃疾"><a href="#辛弃疾" class="headerlink" title="辛弃疾"></a>辛弃疾</h3><p>少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。<br>而今识尽愁滋味，欲说还休。欲说还休，却道天凉好个秋。</p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/07/25/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -34,19 +47,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2022.3.12碎碎念</title>
-    <url>/2022/03/12/2022-3-12%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
-    <content><![CDATA[<h1 id="愁"><a href="#愁" class="headerlink" title="愁"></a>愁</h1><h2 id="丑奴儿·书博山道中壁"><a href="#丑奴儿·书博山道中壁" class="headerlink" title="丑奴儿·书博山道中壁"></a>丑奴儿·书博山道中壁</h2><h3 id="辛弃疾"><a href="#辛弃疾" class="headerlink" title="辛弃疾"></a>辛弃疾</h3><p>少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。<br>而今识尽愁滋味，欲说还休。欲说还休，却道天凉好个秋。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python实验六</title>
     <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
     <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
@@ -55,6 +55,19 @@
 ]]></content>
       <categories>
         <category>python</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三行情诗</title>
+    <url>/2022/04/03/%E4%B8%89%E8%A1%8C%E6%83%85%E8%AF%97/</url>
+    <content><![CDATA[<p><strong>“螃蟹在剥我的壳 笔记本在写我</strong><br><strong>漫天的我落在枫叶上雪花上</strong><br><strong>而你在想我”</strong></p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -75,6 +88,11 @@
         <tag>导航</tag>
         <tag>分享</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇文章</title>
+    <url>/2021/07/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>数据结构学习通</title>
@@ -105,11 +123,6 @@
         <tag>导航</tag>
         <tag>分享</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇文章</title>
-    <url>/2021/07/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>数据结构实验1</title>
@@ -225,19 +238,6 @@
       </tags>
   </entry>
   <entry>
-    <title>无聊之谈</title>
-    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
-    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新的征程</title>
     <url>/2021/07/25/%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="新的征程"><a href="#新的征程" class="headerlink" title="新的征程"></a>新的征程</h1><h2 id="第一篇文章哦-试验"><a href="#第一篇文章哦-试验" class="headerlink" title="第一篇文章哦-试验"></a>第一篇文章哦-试验</h2><ul>
@@ -254,6 +254,19 @@
 ]]></content>
       <categories>
         <category>前端</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无聊之谈</title>
+    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
+    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -278,19 +291,6 @@
     <title>超</title>
     <url>/2021/11/25/%E8%B6%85/</url>
     <content><![CDATA[<h1 id="人能干的咱就干，人干不了的咱想法干。"><a href="#人能干的咱就干，人干不了的咱想法干。" class="headerlink" title="人能干的咱就干，人干不了的咱想法干。"></a>人能干的咱就干，人干不了的咱想法干。</h1>]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三行情诗</title>
-    <url>/2022/04/03/%E4%B8%89%E8%A1%8C%E6%83%85%E8%AF%97/</url>
-    <content><![CDATA[<p><strong>“螃蟹在剥我的壳 笔记本在写我</strong><br><strong>漫天的我落在枫叶上雪花上</strong><br><strong>而你在想我”</strong></p>
-]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
