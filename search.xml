@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2022.3.12碎碎念</title>
-    <url>/2022/03/12/2022-3-12%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
-    <content><![CDATA[<h1 id="愁"><a href="#愁" class="headerlink" title="愁"></a>愁</h1><h2 id="丑奴儿·书博山道中壁"><a href="#丑奴儿·书博山道中壁" class="headerlink" title="丑奴儿·书博山道中壁"></a>丑奴儿·书博山道中壁</h2><h3 id="辛弃疾"><a href="#辛弃疾" class="headerlink" title="辛弃疾"></a>辛弃疾</h3><p>少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。<br>而今识尽愁滋味，欲说还休。欲说还休，却道天凉好个秋。</p>
+    <title>A-SOUL</title>
+    <url>/2021/10/03/A-SOUL/</url>
+    <content><![CDATA[<ul>
+<li>一个魂必听<br>  <a href="https://www.bilibili.com/video/BV1p5411w71j">枝江</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>碎碎念</category>
+        <category>MUSIC</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -64,14 +66,12 @@
       </tags>
   </entry>
   <entry>
-    <title>A-SOUL</title>
-    <url>/2021/10/03/A-SOUL/</url>
-    <content><![CDATA[<ul>
-<li>一个魂必听<br>  <a href="https://www.bilibili.com/video/BV1p5411w71j">枝江</a></li>
-</ul>
+    <title>2022.3.12碎碎念</title>
+    <url>/2022/03/12/2022-3-12%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
+    <content><![CDATA[<h1 id="愁"><a href="#愁" class="headerlink" title="愁"></a>愁</h1><h2 id="丑奴儿·书博山道中壁"><a href="#丑奴儿·书博山道中壁" class="headerlink" title="丑奴儿·书博山道中壁"></a>丑奴儿·书博山道中壁</h2><h3 id="辛弃疾"><a href="#辛弃疾" class="headerlink" title="辛弃疾"></a>辛弃疾</h3><p>少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。<br>而今识尽愁滋味，欲说还休。欲说还休，却道天凉好个秋。</p>
 ]]></content>
       <categories>
-        <category>MUSIC</category>
+        <category>碎碎念</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -95,21 +95,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>python实验六</title>
-    <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
-    <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
   </entry>
   <entry>
     <title>三行情诗</title>
@@ -138,6 +123,21 @@
 ]]></content>
       <categories>
         <category>宅舞</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python实验六</title>
+    <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
+    <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
+]]></content>
+      <categories>
+        <category>python</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -291,12 +291,22 @@
       </tags>
   </entry>
   <entry>
-    <title>无聊之谈</title>
-    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
-    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
+    <title>新的征程</title>
+    <url>/2021/07/25/%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="新的征程"><a href="#新的征程" class="headerlink" title="新的征程"></a>新的征程</h1><h2 id="第一篇文章哦-试验"><a href="#第一篇文章哦-试验" class="headerlink" title="第一篇文章哦-试验"></a>第一篇文章哦-试验</h2><ul>
+<li>列表1<br>  <a href="https://www.bilibili.com/">哔哩哔哩</a></li>
+<li>列表2<br>  无</li>
+</ul>
+<hr>
+<p><em>斜着的字哦</em><br><strong>加粗字体</strong><br><code>&lt;html&gt;&lt;/html&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello world&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引用xxx</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>碎碎念</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -327,36 +337,12 @@
       </tags>
   </entry>
   <entry>
-    <title>棋盘覆盖问题</title>
-    <url>/2022/04/01/%E6%A3%8B%E7%9B%98%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="天下之至拙，能胜天下之至巧"><a href="#天下之至拙，能胜天下之至巧" class="headerlink" title="天下之至拙，能胜天下之至巧"></a>天下之至拙，能胜天下之至巧</h2><p>简介：<br>在一个2^k×2^k 个方格组成的棋盘中，恰有一个方格与其它方格不同，称该方格为一特殊方格，且称该棋盘为一特殊棋盘。在棋盘覆盖问题中，要用4种不同形态的L型骨牌覆盖给定的特殊棋盘上除特殊方格以外的所有方格，且任何2个L型骨牌不得重叠覆盖。<br><em><strong>代码请点击“阅读全文”</strong></em></p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;iomanip&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int title = 1;</span><br><span class="line">int board[100][100];</span><br><span class="line">void ChessBoard(int tr, int tc, int dr, int dc, int size)</span><br><span class="line">&#123;	</span><br><span class="line">	if (size == 1) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	int t = title++;</span><br><span class="line">	int s = size / 2;</span><br><span class="line">	//左上角</span><br><span class="line">	if (dr &lt; tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">		ChessBoard(tr, tc, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s - 1][tc + s - 1] = t;</span><br><span class="line">		ChessBoard(tr, tc, tr + s - 1, tc + s - 1, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//右上角</span><br><span class="line">	if (dr &lt; tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">		ChessBoard(tr, tc + s, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s - 1][tc + s] = t;</span><br><span class="line">		ChessBoard(tr, tc + s, tr + s - 1, tc + s, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//左下角</span><br><span class="line">	if (dr &gt;= tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">		ChessBoard(tr+s, tc , dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s][tc + s-1] = t;</span><br><span class="line">		ChessBoard(tr+s, tc , tr + s , tc + s-1, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//右下角</span><br><span class="line">	if (dr &gt;= tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">		ChessBoard(tr + s, tc+s, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s][tc + s ] = t;</span><br><span class="line">		ChessBoard(tr + s, tc+s, tr + s, tc + s, s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int tr, tc,dr,dc,size;//tr,tc 分别是棋盘左上角的行列坐标，dr,dc 分别是特殊方格行列坐标，size 是棋盘的行数或者列数</span><br><span class="line">	cin &gt;&gt;size &gt;&gt;dr &gt;&gt; dc;</span><br><span class="line">	ChessBoard(1, 1, dr, dc, size);</span><br><span class="line">	for (int i = 1; i &lt;= size; i++) &#123;</span><br><span class="line">		int j = 1;</span><br><span class="line">		for (; j &lt;= size-1; j++) &#123;</span><br><span class="line">			cout &lt;&lt;setw(2)&lt;&lt; board[i][j]&lt;&lt;&quot; &quot;;//setw(2)起到限制输出宽度的作用</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt;setw(2)&lt;&lt; board[i][j];</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>c语言</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新的征程</title>
-    <url>/2021/07/25/%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="新的征程"><a href="#新的征程" class="headerlink" title="新的征程"></a>新的征程</h1><h2 id="第一篇文章哦-试验"><a href="#第一篇文章哦-试验" class="headerlink" title="第一篇文章哦-试验"></a>第一篇文章哦-试验</h2><ul>
-<li>列表1<br>  <a href="https://www.bilibili.com/">哔哩哔哩</a></li>
-<li>列表2<br>  无</li>
-</ul>
-<hr>
-<p><em>斜着的字哦</em><br><strong>加粗字体</strong><br><code>&lt;html&gt;&lt;/html&gt;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;hello world&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>引用xxx</p>
-</blockquote>
+    <title>无聊之谈</title>
+    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
+    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>碎碎念</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -369,6 +355,20 @@
     <content><![CDATA[<h1 id="人能干的咱就干，人干不了的咱想法干。"><a href="#人能干的咱就干，人干不了的咱想法干。" class="headerlink" title="人能干的咱就干，人干不了的咱想法干。"></a>人能干的咱就干，人干不了的咱想法干。</h1>]]></content>
       <categories>
         <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>棋盘覆盖问题</title>
+    <url>/2022/04/01/%E6%A3%8B%E7%9B%98%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="天下之至拙，能胜天下之至巧"><a href="#天下之至拙，能胜天下之至巧" class="headerlink" title="天下之至拙，能胜天下之至巧"></a>天下之至拙，能胜天下之至巧</h2><p>简介：<br>在一个2^k×2^k 个方格组成的棋盘中，恰有一个方格与其它方格不同，称该方格为一特殊方格，且称该棋盘为一特殊棋盘。在棋盘覆盖问题中，要用4种不同形态的L型骨牌覆盖给定的特殊棋盘上除特殊方格以外的所有方格，且任何2个L型骨牌不得重叠覆盖。<br><em><strong>代码请点击“阅读全文”</strong></em></p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;iomanip&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int title = 1;</span><br><span class="line">int board[100][100];</span><br><span class="line">void ChessBoard(int tr, int tc, int dr, int dc, int size)</span><br><span class="line">&#123;	</span><br><span class="line">	if (size == 1) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	int t = title++;</span><br><span class="line">	int s = size / 2;</span><br><span class="line">	//左上角</span><br><span class="line">	if (dr &lt; tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">		ChessBoard(tr, tc, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s - 1][tc + s - 1] = t;</span><br><span class="line">		ChessBoard(tr, tc, tr + s - 1, tc + s - 1, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//右上角</span><br><span class="line">	if (dr &lt; tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">		ChessBoard(tr, tc + s, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s - 1][tc + s] = t;</span><br><span class="line">		ChessBoard(tr, tc + s, tr + s - 1, tc + s, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//左下角</span><br><span class="line">	if (dr &gt;= tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">		ChessBoard(tr+s, tc , dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s][tc + s-1] = t;</span><br><span class="line">		ChessBoard(tr+s, tc , tr + s , tc + s-1, s);</span><br><span class="line">	&#125;</span><br><span class="line">	//右下角</span><br><span class="line">	if (dr &gt;= tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">		ChessBoard(tr + s, tc+s, dr, dc, s);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		board[tr + s][tc + s ] = t;</span><br><span class="line">		ChessBoard(tr + s, tc+s, tr + s, tc + s, s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int tr, tc,dr,dc,size;//tr,tc 分别是棋盘左上角的行列坐标，dr,dc 分别是特殊方格行列坐标，size 是棋盘的行数或者列数</span><br><span class="line">	cin &gt;&gt;size &gt;&gt;dr &gt;&gt; dc;</span><br><span class="line">	ChessBoard(1, 1, dr, dc, size);</span><br><span class="line">	for (int i = 1; i &lt;= size; i++) &#123;</span><br><span class="line">		int j = 1;</span><br><span class="line">		for (; j &lt;= size-1; j++) &#123;</span><br><span class="line">			cout &lt;&lt;setw(2)&lt;&lt; board[i][j]&lt;&lt;&quot; &quot;;//setw(2)起到限制输出宽度的作用</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt;setw(2)&lt;&lt; board[i][j];</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c语言</category>
       </categories>
       <tags>
         <tag>导航</tag>
