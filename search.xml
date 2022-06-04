@@ -14,6 +14,36 @@
       </tags>
   </entry>
   <entry>
+    <title>A-SOUL</title>
+    <url>/2021/10/03/A-SOUL/</url>
+    <content><![CDATA[<ul>
+<li>一个魂必听<br>  <a href="https://www.bilibili.com/video/BV1p5411w71j">枝江</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>MUSIC</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python实验六</title>
+    <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
+    <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2022Java期末复习</title>
     <url>/2022/05/12/2022Java%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="时不我待，做想做的事，见想见的人"><a href="#时不我待，做想做的事，见想见的人" class="headerlink" title="时不我待，做想做的事，见想见的人"></a>时不我待，做想做的事，见想见的人</h2><hr>
@@ -64,6 +94,19 @@
       </tags>
   </entry>
   <entry>
+    <title>三行情诗</title>
+    <url>/2022/04/03/%E4%B8%89%E8%A1%8C%E6%83%85%E8%AF%97/</url>
+    <content><![CDATA[<p><strong>“螃蟹在剥我的壳 笔记本在写我</strong><br><strong>漫天的我落在枫叶上雪花上</strong><br><strong>而你在想我”</strong></p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/07/25/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -80,49 +123,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>python实验六</title>
-    <url>/2021/10/21/python%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
-    <content><![CDATA[<h1 id="第二部分第九题"><a href="#第二部分第九题" class="headerlink" title="第二部分第九题"></a>第二部分第九题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">admin=df.sort_values(by=&#x27;adcode&#x27;)[[&quot;city&quot;,&quot;city_code&quot;]].drop_duplicates()</span><br><span class="line">for code in admin.values:</span><br><span class="line">	name=code[0]</span><br><span class="line">	dfcountry=df.loc[df[&quot;city&quot;]==name]</span><br><span class="line">	yep=pd.crosstab(values=dfcoutry[&quot;area&quot;],index=dfcountry[&quot;district&quot;],columns=dfcountry[&quot;一级lu2010&quot;],aggfunc=np.sum,margins=True,margins_name=&quot;总计&quot;）</span><br><span class="line">	yep.columns=luname#luname是那个类型的列表</span><br><span class="line">	yep.to_csv(URL+str(code[1])+&quot;_&quot;+name+&quot;各县市土地利用面积统计表.xls&quot;,encoding=&quot;utf_8_sig&quot;)</span><br><span class="line">	print(&quot;finish&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>在操作的时候数据有时候因为误点其他位置会变成0，需要重新执行导入操作；<br>写入表格的时候，需要注意写入URL，路径尽量用英文字母，不要出现中文。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A-SOUL</title>
-    <url>/2021/10/03/A-SOUL/</url>
-    <content><![CDATA[<ul>
-<li>一个魂必听<br>  <a href="https://www.bilibili.com/video/BV1p5411w71j">枝江</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>MUSIC</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三行情诗</title>
-    <url>/2022/04/03/%E4%B8%89%E8%A1%8C%E6%83%85%E8%AF%97/</url>
-    <content><![CDATA[<p><strong>“螃蟹在剥我的壳 笔记本在写我</strong><br><strong>漫天的我落在枫叶上雪花上</strong><br><strong>而你在想我”</strong></p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
   </entry>
   <entry>
     <title>宅舞推荐</title>
@@ -246,6 +246,33 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构实验3-4</title>
+    <url>/2021/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C3-4/</url>
+    <content><![CDATA[<h2 id="7080"><a href="#7080" class="headerlink" title="7080"></a>7080</h2><p><code>叶子结点个数</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int treeleaf(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	if (t == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	if (t-&gt;lchild == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1 + treeleaf(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return treeleaf(t-&gt;rchild) + treeleaf(t-&gt;lchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	cout &lt;&lt; treeleaf(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="7079"><a href="#7079" class="headerlink" title="7079"></a>7079</h2><p><code>中序遍历</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int treeleaf(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	if (t == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	if (t-&gt;lchild == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1 + treeleaf(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return treeleaf(t-&gt;rchild) + treeleaf(t-&gt;lchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void MidOutBiTree(Tree t) &#123;</span><br><span class="line">	if (t) &#123;</span><br><span class="line">		MidOutBiTree(t-&gt;lchild);</span><br><span class="line">		cout &lt;&lt; t-&gt;data;</span><br><span class="line">		MidOutBiTree(t-&gt;rchild);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	MidOutBiTree(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7077"><a href="#7077" class="headerlink" title="7077"></a>7077</h2><p><code>层次遍历</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void levelorder(Tree t)</span><br><span class="line">&#123;</span><br><span class="line">	queue&lt;Tree&gt; q;</span><br><span class="line">	q.push(t);</span><br><span class="line">	while (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		Tree temp;</span><br><span class="line">		temp = q.front();</span><br><span class="line">		q.pop();</span><br><span class="line">		cout &lt;&lt; temp-&gt;data;</span><br><span class="line">		if (temp-&gt;lchild != NULL)</span><br><span class="line">		&#123;</span><br><span class="line">			q.push(temp-&gt;lchild);</span><br><span class="line">		&#125;</span><br><span class="line">		if (temp-&gt;rchild != NULL)</span><br><span class="line">		&#123;</span><br><span class="line">			q.push(temp-&gt;rchild);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	levelorder(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7076"><a href="#7076" class="headerlink" title="7076"></a>7076</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LeafNum(Tree t, int&amp; num) &#123;</span><br><span class="line">	if (t) &#123;</span><br><span class="line">		if (t-&gt;lchild == NULL &amp;&amp; t-&gt;rchild == NULL) &#123;</span><br><span class="line">			num++;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			LeafNum(t-&gt;lchild, num);</span><br><span class="line">			LeafNum(t-&gt;rchild, num);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int num;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	LeafNum(t, num);</span><br><span class="line">	cout&lt;&lt;num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7075"><a href="#7075" class="headerlink" title="7075"></a>7075</h2><p><code>后序遍历</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//后序</span><br><span class="line">void pasorder2(Tree t)</span><br><span class="line">&#123;</span><br><span class="line">	struct</span><br><span class="line">	&#123;</span><br><span class="line">		Tree pp;</span><br><span class="line">		int tag;</span><br><span class="line">	&#125;ss[100];</span><br><span class="line">	int top; Tree p;</span><br><span class="line">	top = 0; p = t;</span><br><span class="line">	while (p || top &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		while (p)</span><br><span class="line">		&#123;</span><br><span class="line">			top++;</span><br><span class="line">			ss[top].tag = 0;</span><br><span class="line">			ss[top].pp = p;</span><br><span class="line">			p = p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line">		if (top &gt; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			if (ss[top].tag == 0)</span><br><span class="line">			&#123;</span><br><span class="line">				ss[top].tag = 1;</span><br><span class="line">				p = ss[top].pp;</span><br><span class="line">				p = p-&gt;rchild;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				p = ss[top].pp;</span><br><span class="line">				cout &lt;&lt; p-&gt;data;</span><br><span class="line">				top--;</span><br><span class="line">				p = NULL;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	int num;</span><br><span class="line">	creattree(t);</span><br><span class="line">	pasorder2(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7074"><a href="#7074" class="headerlink" title="7074"></a>7074</h2><p><code>树高</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int Depth(Tree t) &#123;</span><br><span class="line">	int m = 0, n = 0;</span><br><span class="line">	if (t == NULL) &#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		m = Depth(t-&gt;lchild);</span><br><span class="line">		n = Depth(t-&gt;rchild);</span><br><span class="line">		if (m &gt; n) &#123;</span><br><span class="line">			return m + 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			return n + 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	int num;</span><br><span class="line">	creattree(t);</span><br><span class="line">	num=Depth(t);</span><br><span class="line">	cout &lt;&lt;num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构实验5</title>
     <url>/2021/11/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C5/</url>
     <content><![CDATA[<h2 id="7043"><a href="#7043" class="headerlink" title="7043"></a>7043</h2><p><code>利用邻接表实现无向图的广度优先遍历</code></p>
@@ -257,6 +284,19 @@
 ]]></content>
       <categories>
         <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无聊之谈</title>
+    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
+    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
       </categories>
       <tags>
         <tag>导航</tag>
@@ -303,46 +343,6 @@
 ]]></content>
       <categories>
         <category>前端</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无聊之谈</title>
-    <url>/2021/11/03/%E6%97%A0%E8%81%8A%E4%B9%8B%E8%B0%88/</url>
-    <content><![CDATA[<h1 id="毛遂自荐"><a href="#毛遂自荐" class="headerlink" title="毛遂自荐"></a>毛遂自荐</h1><p>赵文博是个花心的人，尽管他智力超群，<br>他有一双普通的眼睛，对于晶莹剔透的情有独钟，<br>他深知孔夫子的教诲：见贤思齐焉，见不贤而内自省也。<br>所以他一定可以一骑绝尘。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构实验3-4</title>
-    <url>/2021/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C3-4/</url>
-    <content><![CDATA[<h2 id="7080"><a href="#7080" class="headerlink" title="7080"></a>7080</h2><p><code>叶子结点个数</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int treeleaf(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	if (t == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	if (t-&gt;lchild == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1 + treeleaf(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return treeleaf(t-&gt;rchild) + treeleaf(t-&gt;lchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	cout &lt;&lt; treeleaf(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h2 id="7079"><a href="#7079" class="headerlink" title="7079"></a>7079</h2><p><code>中序遍历</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int treeleaf(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	if (t == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	if (t-&gt;lchild == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return 1 + treeleaf(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		return treeleaf(t-&gt;rchild) + treeleaf(t-&gt;lchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void MidOutBiTree(Tree t) &#123;</span><br><span class="line">	if (t) &#123;</span><br><span class="line">		MidOutBiTree(t-&gt;lchild);</span><br><span class="line">		cout &lt;&lt; t-&gt;data;</span><br><span class="line">		MidOutBiTree(t-&gt;rchild);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	MidOutBiTree(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7077"><a href="#7077" class="headerlink" title="7077"></a>7077</h2><p><code>层次遍历</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void levelorder(Tree t)</span><br><span class="line">&#123;</span><br><span class="line">	queue&lt;Tree&gt; q;</span><br><span class="line">	q.push(t);</span><br><span class="line">	while (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		Tree temp;</span><br><span class="line">		temp = q.front();</span><br><span class="line">		q.pop();</span><br><span class="line">		cout &lt;&lt; temp-&gt;data;</span><br><span class="line">		if (temp-&gt;lchild != NULL)</span><br><span class="line">		&#123;</span><br><span class="line">			q.push(temp-&gt;lchild);</span><br><span class="line">		&#125;</span><br><span class="line">		if (temp-&gt;rchild != NULL)</span><br><span class="line">		&#123;</span><br><span class="line">			q.push(temp-&gt;rchild);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	levelorder(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7076"><a href="#7076" class="headerlink" title="7076"></a>7076</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LeafNum(Tree t, int&amp; num) &#123;</span><br><span class="line">	if (t) &#123;</span><br><span class="line">		if (t-&gt;lchild == NULL &amp;&amp; t-&gt;rchild == NULL) &#123;</span><br><span class="line">			num++;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			LeafNum(t-&gt;lchild, num);</span><br><span class="line">			LeafNum(t-&gt;rchild, num);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int num;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	creattree(t);</span><br><span class="line">	LeafNum(t, num);</span><br><span class="line">	cout&lt;&lt;num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7075"><a href="#7075" class="headerlink" title="7075"></a>7075</h2><p><code>后序遍历</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//后序</span><br><span class="line">void pasorder2(Tree t)</span><br><span class="line">&#123;</span><br><span class="line">	struct</span><br><span class="line">	&#123;</span><br><span class="line">		Tree pp;</span><br><span class="line">		int tag;</span><br><span class="line">	&#125;ss[100];</span><br><span class="line">	int top; Tree p;</span><br><span class="line">	top = 0; p = t;</span><br><span class="line">	while (p || top &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		while (p)</span><br><span class="line">		&#123;</span><br><span class="line">			top++;</span><br><span class="line">			ss[top].tag = 0;</span><br><span class="line">			ss[top].pp = p;</span><br><span class="line">			p = p-&gt;lchild;</span><br><span class="line">		&#125;</span><br><span class="line">		if (top &gt; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			if (ss[top].tag == 0)</span><br><span class="line">			&#123;</span><br><span class="line">				ss[top].tag = 1;</span><br><span class="line">				p = ss[top].pp;</span><br><span class="line">				p = p-&gt;rchild;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				p = ss[top].pp;</span><br><span class="line">				cout &lt;&lt; p-&gt;data;</span><br><span class="line">				top--;</span><br><span class="line">				p = NULL;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	int num;</span><br><span class="line">	creattree(t);</span><br><span class="line">	pasorder2(t);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7074"><a href="#7074" class="headerlink" title="7074"></a>7074</h2><p><code>树高</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">	char data;</span><br><span class="line">	node* lchild, * rchild;</span><br><span class="line">&#125;Node,*Tree;</span><br><span class="line"></span><br><span class="line">void creattree(Tree&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	char ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line">	if (ch == &#x27;@&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		t = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		t = new Node;</span><br><span class="line">		t-&gt;data = ch;</span><br><span class="line">		creattree(t-&gt;lchild);</span><br><span class="line">		creattree(t-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int Depth(Tree t) &#123;</span><br><span class="line">	int m = 0, n = 0;</span><br><span class="line">	if (t == NULL) &#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		m = Depth(t-&gt;lchild);</span><br><span class="line">		n = Depth(t-&gt;rchild);</span><br><span class="line">		if (m &gt; n) &#123;</span><br><span class="line">			return m + 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			return n + 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Tree t = new Node;</span><br><span class="line">	int num;</span><br><span class="line">	creattree(t);</span><br><span class="line">	num=Depth(t);</span><br><span class="line">	cout &lt;&lt;num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>c语言</category>
       </categories>
       <tags>
         <tag>导航</tag>
