@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/tt.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/tt.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="答案8559线性表逆置 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;iostream&gt;using namespace std;struct Node &amp;#123;	int data;	Node* n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构实验1">
+<meta property="og:url" content="http://example.com/2021/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C1/index.html">
+<meta property="og:site_name" content="落霞与孤鹜齐飞">
+<meta property="og:description" content="答案8559线性表逆置 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;iostream&gt;using namespace std;struct Node &amp;#123;	int data;	Node* n">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-25T13:34:57.000Z">
+<meta property="article:modified_time" content="2022-03-31T13:16:32.013Z">
+<meta property="article:author" content="赵文博">
+<meta property="article:tag" content="导航">
+<meta property="article:tag" content="分享">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C1/","path":"2021/09/25/数据结构实验1/","title":"数据结构实验1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据结构实验1 | 落霞与孤鹜齐飞</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">落霞与孤鹜齐飞</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%94%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">答案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8559"><span class="nav-number">1.1.</span> <span class="nav-text">8559</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8556"><span class="nav-number">1.2.</span> <span class="nav-text">8556</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8557"><span class="nav-number">1.3.</span> <span class="nav-text">8557</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8558"><span class="nav-number">1.4.</span> <span class="nav-text">8558</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8560"><span class="nav-number">1.5.</span> <span class="nav-text">8560</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵文博"
+      src="/images/tx.png">
+  <p class="site-author-name" itemprop="name">赵文博</p>
+  <div class="site-description" itemprop="description">愿我们归来仍少年</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/5601927404" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;5601927404" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/283399592" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;283399592" rel="noopener" target="_blank"><i class="fas fa-tv fa-fw"></i>bilibili</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">百度一下</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tx.png">
+      <meta itemprop="name" content="赵文博">
+      <meta itemprop="description" content="愿我们归来仍少年">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落霞与孤鹜齐飞">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构实验1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-25 21:34:57" itemprop="dateCreated datePublished" datetime="2021-09-25T21:34:57+08:00">2021-09-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-03-31 21:16:32" itemprop="dateModified" datetime="2022-03-31T21:16:32+08:00">2022-03-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/c%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">c语言</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><h2 id="8559"><a href="#8559" class="headerlink" title="8559"></a>8559</h2><p><code>线性表逆置</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Node &#123;</span><br><span class="line">	int data;</span><br><span class="line">	Node* next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void show(Node* head) &#123;</span><br><span class="line">	head = head-&gt;next;</span><br><span class="line">	while (head != nullptr) &#123;</span><br><span class="line">		cout &lt;&lt; head-&gt;data &lt;&lt; &quot; &quot;;</span><br><span class="line">		head = head-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void reverse(Node* head) &#123;</span><br><span class="line">	Node* remain, * p, * q;</span><br><span class="line">	remain = head-&gt;next;</span><br><span class="line">	head-&gt;next = nullptr;</span><br><span class="line">	while (remain != nullptr) &#123;</span><br><span class="line">		p = remain;</span><br><span class="line">		remain = remain-&gt;next;</span><br><span class="line">		p-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int num;</span><br><span class="line">	int n;</span><br><span class="line">	Node* first, * p, * rear;</span><br><span class="line">	first = new Node;</span><br><span class="line">	first-&gt;next = nullptr;</span><br><span class="line">	rear = first;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	</span><br><span class="line">	for (int i = 0; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">		</span><br><span class="line">		p = new Node;</span><br><span class="line">		p-&gt;data = num;</span><br><span class="line">		p-&gt;next = nullptr;</span><br><span class="line"></span><br><span class="line">		rear-&gt;next = p;</span><br><span class="line">		rear = rear-&gt;next;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; &quot;原链表为：&quot;;</span><br><span class="line">	show(first);</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	reverse(first);</span><br><span class="line">	cout &lt;&lt; &quot;逆置链表为：&quot;;</span><br><span class="line">	show(first);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="8556"><a href="#8556" class="headerlink" title="8556"></a>8556</h2><p><code>删除偶数结点</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">//Come I Here World Hello</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#define Elemtype int</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Node &#123;</span><br><span class="line">	int data;</span><br><span class="line">	Node* next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void show(Node* head) &#123;</span><br><span class="line">	head = head-&gt;next;</span><br><span class="line">	while (head != nullptr) &#123;</span><br><span class="line">		cout &lt;&lt; head-&gt;data &lt;&lt; &quot; &quot;;</span><br><span class="line">		head = head-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void reverse(Node* head) &#123;</span><br><span class="line">	Node* remain, * p, * q;</span><br><span class="line">	remain = head-&gt;next;</span><br><span class="line">	head-&gt;next = nullptr;</span><br><span class="line">	while (remain != nullptr) &#123;</span><br><span class="line">		p = remain;</span><br><span class="line">		remain = remain-&gt;next;</span><br><span class="line">		p-&gt;next = head-&gt;next;</span><br><span class="line">		head-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void Bubble(Node* head)</span><br><span class="line">&#123;</span><br><span class="line">	Node* pre, *cur, *next, *end;//pre前一项 cur当前项 next后一项 end控制循环次数(优化冒泡)</span><br><span class="line">	end = NULL;</span><br><span class="line"></span><br><span class="line">	while (head-&gt;next != end)</span><br><span class="line">	&#123;</span><br><span class="line">		//初始化三个指针 ; 判断是否到达结束位置 ; 三个指针集体后移</span><br><span class="line">		for (pre = head, cur = pre-&gt;next, next = cur-&gt;next; next != end; pre = pre-&gt;next, cur = cur-&gt;next, next = next-&gt;next)</span><br><span class="line">		&#123;</span><br><span class="line">			if (cur-&gt;data &gt; next-&gt;data) //从小到大</span><br><span class="line">			&#123;</span><br><span class="line">				pre-&gt;next = next;</span><br><span class="line">				cur-&gt;next = next-&gt;next;</span><br><span class="line">				next-&gt;next = cur;</span><br><span class="line"></span><br><span class="line">				//此时next变前一项，cur变后一项  交换next cur</span><br><span class="line">				Node* temp = cur; cur = next; next = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		//一轮循环结束 最后一项已经排好 end提前一项 (冒泡原理)</span><br><span class="line">		end = cur;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void del(Node* h)</span><br><span class="line">&#123;</span><br><span class="line">	Node* p,*q;</span><br><span class="line">	p = h;</span><br><span class="line">	while (p &amp;&amp; p-&gt;next) &#123;</span><br><span class="line">		while (p-&gt;next &amp;&amp; p-&gt;next-&gt;data % 2 == 0) &#123;</span><br><span class="line">			q = p-&gt;next;</span><br><span class="line">			p-&gt;next = q-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int num;</span><br><span class="line"></span><br><span class="line">	Node* first, * p, * rear;</span><br><span class="line">	first = new Node;</span><br><span class="line">	first-&gt;next = nullptr;</span><br><span class="line">	rear = first;</span><br><span class="line"></span><br><span class="line">	//cout &lt;&lt; &quot;请输入数据：   0代表输入结束&quot; &lt;&lt; &#x27;\n&#x27;;</span><br><span class="line">	cin &gt;&gt; num;</span><br><span class="line">	while (num != 0) &#123;</span><br><span class="line">		p = new Node;</span><br><span class="line">		p-&gt;data = num;</span><br><span class="line">		p-&gt;next = nullptr;</span><br><span class="line"></span><br><span class="line">		rear-&gt;next = p;</span><br><span class="line">		rear = rear-&gt;next;</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">	&#125;</span><br><span class="line">	del(first);//删除偶数结点</span><br><span class="line">	show(first);//输出函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8557"><a href="#8557" class="headerlink" title="8557"></a>8557</h2><p><code>建立两个非递减序列，合成非递增序列</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;malloc.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef struct Node</span><br><span class="line">&#123;</span><br><span class="line">    int data;</span><br><span class="line">    struct Node* next;</span><br><span class="line">&#125;LinkNode, * Linklist;</span><br><span class="line">/*</span><br><span class="line">    初始化链表</span><br><span class="line">*/</span><br><span class="line">Linklist Initlist()</span><br><span class="line">&#123;</span><br><span class="line">    Linklist L;</span><br><span class="line">    L = (Linklist)malloc(sizeof(LinkNode));</span><br><span class="line">    L-&gt;next = NULL;</span><br><span class="line">    return L;</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">    尾插法建立链表</span><br><span class="line">*/</span><br><span class="line">void CreatFromTail(Linklist L)</span><br><span class="line">&#123;</span><br><span class="line">    int data = -1;</span><br><span class="line">    Linklist s, tail;</span><br><span class="line">    tail = L;</span><br><span class="line">    cin &gt;&gt; data;</span><br><span class="line">    while (data != 0)</span><br><span class="line">    &#123;</span><br><span class="line">        s = (Linklist)malloc(sizeof(LinkNode));</span><br><span class="line">        s-&gt;data = data;</span><br><span class="line">        tail-&gt;next = s;</span><br><span class="line">        tail = s;</span><br><span class="line">        cin &gt;&gt; data;</span><br><span class="line">    &#125;</span><br><span class="line">    tail-&gt;next = NULL;</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">    输出链表</span><br><span class="line">*/</span><br><span class="line">void PrintList(Linklist L)</span><br><span class="line">&#123;</span><br><span class="line">    Linklist p = L-&gt;next;</span><br><span class="line">    while (p)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; p-&gt;data&lt;&lt;&quot; &quot;;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">    合并链表</span><br><span class="line">*/</span><br><span class="line">void merge(Linklist LA, Linklist LB)</span><br><span class="line">&#123;</span><br><span class="line">    Linklist p = LA-&gt;next;</span><br><span class="line">    while (p-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    p-&gt;next = LB-&gt;next;</span><br><span class="line">    free(LB);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Bubble(Node* head)</span><br><span class="line">&#123;</span><br><span class="line">    Node* pre, * cur, * next, * end;//pre前一项 cur当前项 next后一项 end控制循环次数(优化冒泡)</span><br><span class="line">    end = NULL;</span><br><span class="line"></span><br><span class="line">    while (head-&gt;next != end)</span><br><span class="line">    &#123;</span><br><span class="line">        //初始化三个指针 ; 判断是否到达结束位置 ; 三个指针集体后移</span><br><span class="line">        for (pre = head, cur = pre-&gt;next, next = cur-&gt;next; next != end; pre = pre-&gt;next, cur = cur-&gt;next, next = next-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            if (cur-&gt;data &lt; next-&gt;data) //从大到小</span><br><span class="line">            &#123;</span><br><span class="line">                pre-&gt;next = next;</span><br><span class="line">                cur-&gt;next = next-&gt;next;</span><br><span class="line">                next-&gt;next = cur;</span><br><span class="line"></span><br><span class="line">                //此时next变前一项，cur变后一项  交换next cur</span><br><span class="line">                Node* temp = cur; cur = next; next = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //一轮循环结束 最后一项已经排好 end提前一项 (冒泡原理)</span><br><span class="line">        end = cur;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    Linklist LA, LB;</span><br><span class="line">    LA = Initlist();</span><br><span class="line">    LB = Initlist();</span><br><span class="line">    CreatFromTail(LA);</span><br><span class="line">    CreatFromTail(LB);</span><br><span class="line">    merge(LA, LB);</span><br><span class="line">    Bubble(LA);</span><br><span class="line">    PrintList(LA);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8558"><a href="#8558" class="headerlink" title="8558"></a>8558</h2><p><code>一个链表分解为两个，一个全是奇数一个全是偶数</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct Node &#123;</span><br><span class="line">	int data;</span><br><span class="line">	Node* next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void show(Node* head) &#123;</span><br><span class="line">	head = head-&gt;next;</span><br><span class="line">	while (head != nullptr) &#123;</span><br><span class="line">		cout &lt;&lt; head-&gt;data &lt;&lt; &quot; &quot;;</span><br><span class="line">		head = head-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void chai(Node* head,Node *head1,Node* head2)</span><br><span class="line">&#123;</span><br><span class="line">	Node* p, * q,*tail1,*tail2;</span><br><span class="line">	p = head-&gt;next;</span><br><span class="line">	q = p-&gt;next;</span><br><span class="line">	tail1 = head1;</span><br><span class="line">	tail2 = head2;</span><br><span class="line">	while (p)</span><br><span class="line">	&#123;</span><br><span class="line">		if (p-&gt;data % 2 == 0)</span><br><span class="line">		&#123;</span><br><span class="line">			p-&gt;next = NULL;//这里还是要让他指向NULL，不然建立完的链表在输出又会出问题</span><br><span class="line">			tail2-&gt;next = p;</span><br><span class="line">			tail2 = p;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			p-&gt;next = NULL;</span><br><span class="line">			tail1-&gt;next = p;</span><br><span class="line">			tail1 = p;</span><br><span class="line">		&#125;</span><br><span class="line">		p = q;</span><br><span class="line">		if (q)</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int num;</span><br><span class="line"></span><br><span class="line">	Node* first, * p, * rear,*head1,*head2;</span><br><span class="line">	first = new Node;</span><br><span class="line">	first-&gt;next = nullptr;</span><br><span class="line">	rear = first;</span><br><span class="line"></span><br><span class="line">	//cout &lt;&lt; &quot;请输入数据：   0代表输入结束&quot; &lt;&lt; &#x27;\n&#x27;;</span><br><span class="line">	cin &gt;&gt; num;</span><br><span class="line">	while (num != 0) &#123;</span><br><span class="line">		p = new Node;</span><br><span class="line">		p-&gt;data = num;</span><br><span class="line">		p-&gt;next = nullptr;</span><br><span class="line"></span><br><span class="line">		rear-&gt;next = p;</span><br><span class="line">		rear = rear-&gt;next;</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">	&#125;</span><br><span class="line">	head1 = new Node;</span><br><span class="line">	head2 = new Node;</span><br><span class="line">	head1-&gt;next = NULL;</span><br><span class="line">	head2-&gt;next = NULL;</span><br><span class="line">	chai(first,head1,head2);</span><br><span class="line">	show(head1);//输出函数</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	show(head2);//输出函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8560"><a href="#8560" class="headerlink" title="8560"></a>8560</h2><p><code>多项式相加</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct PNode &#123;</span><br><span class="line">	float coef;//系数</span><br><span class="line">	int expn;  //指数</span><br><span class="line">	struct PNode* next;</span><br><span class="line">&#125;PNode, * Polynomial;</span><br><span class="line"></span><br><span class="line">void initPolyn(Polynomial&amp; p) &#123;</span><br><span class="line">	p = new PNode;</span><br><span class="line">	p-&gt;next = NULL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void CreatePolyn(Polynomial&amp; P, int n) &#123;</span><br><span class="line">	Polynomial s, pre, q;</span><br><span class="line">	P = new PNode;</span><br><span class="line">	P-&gt;next = NULL;</span><br><span class="line">	for (int i = 1; i &lt;= n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		s = new PNode;</span><br><span class="line">		char b;</span><br><span class="line">		cin &gt;&gt; s-&gt;coef &gt;&gt;b&gt;&gt; s-&gt;expn;</span><br><span class="line">		pre = P;</span><br><span class="line">		q = P-&gt;next;</span><br><span class="line">		while (q &amp;&amp; q-&gt;expn &lt; s-&gt;expn) &#123;</span><br><span class="line">			pre = q;</span><br><span class="line">			q = q-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		s-&gt;next = q;</span><br><span class="line">		pre-&gt;next = s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void cout_L(Polynomial l, int n)// 打印链表的数据，以作检验</span><br><span class="line">&#123;</span><br><span class="line">	Polynomial p;</span><br><span class="line">	p = l-&gt;next;</span><br><span class="line">	cout &lt;&lt; p-&gt;coef &lt;&lt; &quot;*x^&quot; &lt;&lt; p-&gt;expn;</span><br><span class="line">	p = p-&gt;next;</span><br><span class="line">	for (int i = 1; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot; &quot;;</span><br><span class="line">		cout &lt;&lt; p-&gt;coef &lt;&lt; &quot;*x^&quot; &lt;&lt; p-&gt;expn;</span><br><span class="line"></span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int number_L(Polynomial M) &#123;</span><br><span class="line">	Polynomial P;</span><br><span class="line">	int i = 1;</span><br><span class="line">	P = M-&gt;next;</span><br><span class="line">	while (P != NULL) </span><br><span class="line">	&#123;</span><br><span class="line">		P = P-&gt;next;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	return i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void merge_L(Polynomial&amp; la, Polynomial&amp; lb, Polynomial&amp; lc)</span><br><span class="line">&#123;</span><br><span class="line">	Polynomial pa, pb, pc;</span><br><span class="line">	pa = la-&gt;next;</span><br><span class="line">	pb = lb-&gt;next;</span><br><span class="line">	pc = lc = la;</span><br><span class="line"></span><br><span class="line">	while (pa &amp;&amp; pb)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pa-&gt;expn == pb-&gt;expn)</span><br><span class="line">		&#123;</span><br><span class="line">			pa-&gt;coef = pa-&gt;coef + pb-&gt;coef;</span><br><span class="line">			if (pa-&gt;coef == 0)</span><br><span class="line">			&#123;</span><br><span class="line">				pa = pa-&gt;next;</span><br><span class="line">				pb = pb-&gt;next;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">			pc-&gt;next = pa;</span><br><span class="line">			pc = pa;</span><br><span class="line">			pa = pa-&gt;next;</span><br><span class="line">			pb = pb-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (pa-&gt;expn &gt; pb-&gt;expn)</span><br><span class="line">		&#123;</span><br><span class="line">			pc-&gt;next = pb;</span><br><span class="line">			pc = pb;</span><br><span class="line">			pb = pb-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (pa-&gt;expn &lt; pb-&gt;expn)</span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			pc-&gt;next = pa;</span><br><span class="line">			pc = pa;</span><br><span class="line">			pa = pa-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	pc-&gt;next = pa ? pa : pb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	Polynomial La, Lb, Lc;</span><br><span class="line">	int a, b, H;</span><br><span class="line">	cout &lt;&lt; &quot;输入第一个多项式的个数&quot; &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; a;</span><br><span class="line">	cout &lt;&lt; &quot;输入第一个多项式的系数和个数&quot; &lt;&lt; endl;</span><br><span class="line">	CreatePolyn(La, a);</span><br><span class="line">	cout &lt;&lt; &quot;输入第二个多项式的个数&quot; &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; b;</span><br><span class="line">	cout &lt;&lt; &quot;输入第二个多项式的系数和个数&quot; &lt;&lt; endl;</span><br><span class="line">	CreatePolyn(Lb, b);</span><br><span class="line">	initPolyn(Lc);</span><br><span class="line">	merge_L(La, Lb, Lc);</span><br><span class="line">	H = number_L(Lc);</span><br><span class="line">	cout &lt;&lt; &quot;新合并的多项式为：&quot;;</span><br><span class="line">	cout_L(Lc, H - 1);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="赵文博 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%AF%BC%E8%88%AA/" rel="tag"># 导航</a>
+              <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/25/%E6%96%B0%E7%9A%84%E5%BE%81%E7%A8%8B/" rel="prev" title="新的征程">
+                  <i class="fa fa-chevron-left"></i> 新的征程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/09/29/%E5%AE%85%E8%88%9E%E6%8E%A8%E8%8D%90/" rel="next" title="宅舞推荐">
+                  宅舞推荐 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵文博</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60fd41c725a8ec1b" async="async"></script>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/src/click_show_text.js"></script>
+
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

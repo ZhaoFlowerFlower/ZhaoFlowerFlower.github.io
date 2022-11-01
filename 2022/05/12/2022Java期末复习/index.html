@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/tt.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/tt.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="时不我待，做想做的事，见想见的人 第五题是IO实验内容，较容易，略。  ONE假设已经封装好Book,请根据要求实现对应的方法public class Book { private String bookname;&#x2F;&#x2F;书名 private String author;&#x2F;&#x2F;作者 private String publish;&#x2F;&#x2F;出版社 private double price;&#x2F;&#x2F;价格 privat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022Java期末复习">
+<meta property="og:url" content="http://example.com/2022/05/12/2022Java%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="落霞与孤鹜齐飞">
+<meta property="og:description" content="时不我待，做想做的事，见想见的人 第五题是IO实验内容，较容易，略。  ONE假设已经封装好Book,请根据要求实现对应的方法public class Book { private String bookname;&#x2F;&#x2F;书名 private String author;&#x2F;&#x2F;作者 private String publish;&#x2F;&#x2F;出版社 private double price;&#x2F;&#x2F;价格 privat">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-12T11:04:34.000Z">
+<meta property="article:modified_time" content="2022-05-12T11:37:03.648Z">
+<meta property="article:author" content="赵文博">
+<meta property="article:tag" content="导航">
+<meta property="article:tag" content="分享">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/05/12/2022Java%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/05/12/2022Java%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/","path":"2022/05/12/2022Java期末复习/","title":"2022Java期末复习"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2022Java期末复习 | 落霞与孤鹜齐飞</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">落霞与孤鹜齐飞</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E4%B8%8D%E6%88%91%E5%BE%85%EF%BC%8C%E5%81%9A%E6%83%B3%E5%81%9A%E7%9A%84%E4%BA%8B%EF%BC%8C%E8%A7%81%E6%83%B3%E8%A7%81%E7%9A%84%E4%BA%BA"><span class="nav-number">1.</span> <span class="nav-text">时不我待，做想做的事，见想见的人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ONE"><span class="nav-number">2.</span> <span class="nav-text">ONE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TWO"><span class="nav-number">3.</span> <span class="nav-text">TWO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THREE"><span class="nav-number">4.</span> <span class="nav-text">THREE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FOUR"><span class="nav-number">5.</span> <span class="nav-text">FOUR</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵文博"
+      src="/images/tx.png">
+  <p class="site-author-name" itemprop="name">赵文博</p>
+  <div class="site-description" itemprop="description">愿我们归来仍少年</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/5601927404" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;5601927404" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/283399592" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;283399592" rel="noopener" target="_blank"><i class="fas fa-tv fa-fw"></i>bilibili</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">百度一下</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/12/2022Java%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/tx.png">
+      <meta itemprop="name" content="赵文博">
+      <meta itemprop="description" content="愿我们归来仍少年">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落霞与孤鹜齐飞">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2022Java期末复习
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-12 19:04:34 / 修改时间：19:37:03" itemprop="dateCreated datePublished" datetime="2022-05-12T19:04:34+08:00">2022-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="时不我待，做想做的事，见想见的人"><a href="#时不我待，做想做的事，见想见的人" class="headerlink" title="时不我待，做想做的事，见想见的人"></a>时不我待，做想做的事，见想见的人</h2><hr>
+<p>第五题是IO实验内容，较容易，略。</p>
+<hr>
+<h2 id="ONE"><a href="#ONE" class="headerlink" title="ONE"></a>ONE</h2><p>假设已经封装好Book,请根据要求实现对应的方法<br>public class Book {<br> private String bookname;//书名<br> private String author;//作者<br> private String publish;//出版社<br> private double price;//价格<br> private int print;//版次<br> private int  count;//印数<br> private String time; //出版时间<br>//省略所有的getter及setter<br>}<br>（1）传入一个Book对象的List集合以及作者名，返回一个包含该作者出版的所有图书名字的List集合<br>（2）传入一个Book对象的List集合，返回一个按书定价从小到大排序的书的名字的集合。<br>（3）传入一个Book对象的List集合，返回一个按出版社分组的Map，Map的key为出版社，value为该出版社的图书集合。<br><em><strong>代码请点击“阅读全文”</strong></em></p>
+<span id="more"></span>
+<p>Book类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">public class Book &#123;</span><br><span class="line">	private String bookname;//书名</span><br><span class="line">	private String author;//作者</span><br><span class="line">	private  String publish;//出版社</span><br><span class="line">	private double price;//价格</span><br><span class="line">	private int print;//版次</span><br><span class="line">	private int  count;//印数 </span><br><span class="line">	private String time; //出版时间</span><br><span class="line">	public Book(String string, String string2, String string3, double d, int i, int j, String string4) &#123;</span><br><span class="line">		// TODO Auto-generated constructor stub</span><br><span class="line">		this.bookname=string;</span><br><span class="line">		this.author=string2;</span><br><span class="line">		this.publish=string3;</span><br><span class="line">		this.price=d;</span><br><span class="line">		this.print=i;</span><br><span class="line">		this.count=j;</span><br><span class="line">		this.time=string4;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getBookname() &#123;</span><br><span class="line">		return bookname;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setBookname(String bookname) &#123;</span><br><span class="line">		this.bookname = bookname;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getAuthor() &#123;</span><br><span class="line">		return author;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAuthor(String author) &#123;</span><br><span class="line">		this.author = author;</span><br><span class="line">	&#125;</span><br><span class="line">	public  String getPublish() &#123;</span><br><span class="line">		return publish;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPublish(String publish) &#123;</span><br><span class="line">		this.publish = publish;</span><br><span class="line">	&#125;</span><br><span class="line">	public Double getPrice() &#123;</span><br><span class="line">		return price;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPrice(double price) &#123;</span><br><span class="line">		this.price = price;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getPrint() &#123;</span><br><span class="line">		return print;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPrint(int print) &#123;</span><br><span class="line">		this.print = print;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getCount() &#123;</span><br><span class="line">		return count;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setCount(int count) &#123;</span><br><span class="line">		this.count = count;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getTime() &#123;</span><br><span class="line">		return time;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setTime(String time) &#123;</span><br><span class="line">		this.time = time;</span><br><span class="line">	&#125;</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Book [bookname=&quot;+bookname+&quot;,author=&quot;+author+&quot;,&quot;</span><br><span class="line">				+ &quot;publish=&quot;+publish+&quot;,price=&quot;+price+&quot;,print=&quot;+price+&quot;,&quot;</span><br><span class="line">						+ &quot;print=&quot;+print+&quot;,count=&quot;+count+&quot;,time=&quot;+time+&quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Set;</span><br><span class="line">import java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line">public class One &#123;</span><br><span class="line">	</span><br><span class="line">	public static List&lt;String&gt; first(List &lt;Book&gt; l,String au)&#123;</span><br><span class="line">		List &lt;String&gt; m=new ArrayList&lt;String&gt;();</span><br><span class="line">		for(Book s:l) &#123;</span><br><span class="line">			if(s.getAuthor()==au)</span><br><span class="line">				m.add(s.getBookname());</span><br><span class="line">		&#125;</span><br><span class="line">		for (String s : m) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">		return m;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static List&lt;String&gt; second(List &lt;Book&gt; l)&#123;</span><br><span class="line">		List &lt;String&gt; k=new ArrayList&lt;String&gt;();;</span><br><span class="line">		l.sort((a,b)-&gt;a.getPrice().compareTo(b.getPrice()));</span><br><span class="line">		for(Book s:l) &#123;</span><br><span class="line">				k.add(s.getBookname());</span><br><span class="line">		&#125;</span><br><span class="line">		for (String s : k) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">		return k;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static Map&lt;String,List &lt;Book&gt;&gt; third(List &lt;Book&gt; l)&#123;</span><br><span class="line">		Map&lt;String, List&lt;Book&gt;&gt; map=l.stream()</span><br><span class="line">				.collect(Collectors.groupingBy(Book::getPublish));</span><br><span class="line">		for(Book s : map.get(&quot;土豆出版社&quot;))&#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">		return map;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// new5个图书对象</span><br><span class="line">		Book b1 = new Book(&quot;斗破苍穹&quot;,&quot;天蚕土豆&quot;,&quot;土豆出版社&quot;,55.8, 1 , 16 , &quot;2001&quot; );</span><br><span class="line">		Book b2 = new Book( &quot;武动乾坤&quot;,&quot;天蚕土豆&quot;,&quot;土豆出版社&quot;, 49.9,2,16,&quot;2002&quot;);</span><br><span class="line">		Book b3 = new Book(&quot;战皇&quot;,&quot;傲天无痕&quot;,&quot;无痕出版社&quot;,55,3,16,&quot;2003&quot; );</span><br><span class="line">		Book b4 = new Book(&quot;武逆&quot;,&quot;只是小虾米&quot;,&quot;虾米出版社&quot; ,48.5,4,16,&quot;2004&quot; );</span><br><span class="line">		Book b5 = new Book(&quot;绝世武神&quot;,&quot;净无痕&quot;, &quot;无痕出版社&quot; ,55.8,5,16,&quot;2005&quot;);</span><br><span class="line">		Book b6 = new Book(&quot;武极天下&quot;,&quot;蚕茧里的牛&quot;, &quot;蚕茧出版社&quot;,53.6,6,16,&quot;2006&quot; );</span><br><span class="line">		</span><br><span class="line">		List&lt;Book&gt; l = new ArrayList&lt;Book&gt;();</span><br><span class="line">		l.add(b1);</span><br><span class="line">		l.add(b2);</span><br><span class="line">		l.add(b3);</span><br><span class="line">		l.add(b4);</span><br><span class="line">		l.add(b5);</span><br><span class="line">		l.add(b6);</span><br><span class="line">		for (Book s : l) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;======================================================&quot;);</span><br><span class="line">		</span><br><span class="line">		//第一题</span><br><span class="line">		/*List &lt;String&gt; n=new ArrayList&lt;String&gt;();</span><br><span class="line">		n=first(l,&quot;天蚕土豆&quot;);</span><br><span class="line">		for (String s : n) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;*/</span><br><span class="line">		</span><br><span class="line">		//第二题</span><br><span class="line">		/*List &lt;String&gt; gg=new ArrayList&lt;String&gt;();</span><br><span class="line">		gg=second(l);</span><br><span class="line">		System.out.println(&quot;======================================================&quot;);</span><br><span class="line">		for (String s : gg) &#123;</span><br><span class="line">			System.out.println(s);</span><br><span class="line">		&#125;*/</span><br><span class="line">		</span><br><span class="line">        //第三题</span><br><span class="line">		/*Map&lt;String, List&lt;Book&gt;&gt; map=new HashMap&lt;String, List&lt;Book&gt;&gt;();</span><br><span class="line">		map=third(l);*/</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="TWO"><a href="#TWO" class="headerlink" title="TWO"></a>TWO</h2><p>苹果有不同的种类，而不同的品牌会同生产同一种苹果，苹果、种类和品牌三者可以构成一种嵌套关系。<br>//品牌<br>public class Brand {<br> private String brandName;<br> //省略brandName的getter/setter方法<br>}<br>//种类<br>public class Kind {<br> private Brand brand;<br> // 省略brand的getter/setter方法<br>}<br>//苹果<br>public class Apple {<br> private Kind kind;<br> // 省略kind的getter/setter方法<br>}<br>假设我想得到某个苹果的品牌信息，怎么办？请帮我完成下面的方法：<br>public static String getAppleBrandName(Apple apple) {<br>//……<br>}<br>要求<br> (1)不能出现NullPointerException<br> (2)不能用if语句判断</p>
+<p>Apple类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Optional;</span><br><span class="line"></span><br><span class="line">public class Apple &#123;</span><br><span class="line">	 </span><br><span class="line">	private Kind kind2;</span><br><span class="line"> </span><br><span class="line">	public Optional&lt;Kind&gt; getKind2() &#123;   // 使用Optional封装返回值</span><br><span class="line">		return Optional.ofNullable(kind2);</span><br><span class="line">	&#125;</span><br><span class="line">	public void setKind2(Kind kind2) &#123;</span><br><span class="line">		this.kind2 = kind2;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Apple2 [kind2=&quot; + kind2 + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Brand类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Brand &#123;</span><br><span class="line">	</span><br><span class="line">	private String brandName;</span><br><span class="line"> </span><br><span class="line">	public String getBrandName() &#123;</span><br><span class="line">		return brandName;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setBrandName(String brandName) &#123;</span><br><span class="line">		this.brandName = brandName;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Brand [brandName=&quot; + brandName + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Kind类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Optional;</span><br><span class="line"></span><br><span class="line">public class Kind &#123;</span><br><span class="line">	</span><br><span class="line">	private Brand brand;</span><br><span class="line"> </span><br><span class="line">	public Optional&lt;Brand&gt; getBrand() &#123;   // 使用Optional封装返回值</span><br><span class="line">		return Optional.ofNullable(brand);</span><br><span class="line">	&#125;</span><br><span class="line">	public void setBrand(Brand brand) &#123;</span><br><span class="line">		this.brand = brand;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;Kind2 [brand=&quot; + brand + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Optional;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(getAppleBrand(null));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private static String getAppleBrand(Apple apple) &#123;</span><br><span class="line">		return Optional.ofNullable(apple)</span><br><span class="line">				.flatMap(Apple::getKind2)</span><br><span class="line">				.flatMap(Kind::getBrand)</span><br><span class="line">				.map(Brand::getBrandName)</span><br><span class="line">				.orElse(&quot;empty&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="THREE"><a href="#THREE" class="headerlink" title="THREE"></a>THREE</h2><p>编写一个方法，传入一个登记人数，输出登记人数，一旦传入参数为负数，且抛出自定义的异常。<br>//（1）自定义异常类MyException<br>public class Test{<br>        public void regist(int num) throws MyException {<br>        //（2）按题目要求完成方法体<br>        }<br>        public void manager() {<br>        //(3)调用regist(int num)完成登记，如果参数为负，显示“人数为负值，不合理”的提示信息<br> System.out.print(“本次登记操作结束”);<br>       }<br>       public static void main(String args[]){<br>            Test t = new Test();<br>            t.manager();<br>       }<br>}</p>
+<p>自定义异常类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@SuppressWarnings(&quot;serial&quot;)</span><br><span class="line">public class MyException extends Exception&#123; //创建自定义异常</span><br><span class="line">    public MyException(String ErrorExceptin)&#123; //构造方法</span><br><span class="line">        super(ErrorExceptin); //父类构造方法</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">//（1）自定义异常类MyException  </span><br><span class="line">public class TestException &#123;</span><br><span class="line">	        public void regist(int num) throws MyException &#123;</span><br><span class="line">	        	//（2）按题目要求完成方法体</span><br><span class="line">	        	if(num&lt;0) &#123;</span><br><span class="line">	        		throw new MyException(&quot;人数为负值，不合理&quot;);</span><br><span class="line">	        	&#125;</span><br><span class="line">	        	else &#123;</span><br><span class="line">	        		System.out.println(&quot;此次登记人数为：&quot;+num);</span><br><span class="line">	        	&#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	        public void manager() &#123;</span><br><span class="line">	        	//(3)调用regist(int num)完成登记，如果参数为负，显示“人数为负值，不合理”的提示信息</span><br><span class="line">	        	</span><br><span class="line">	        	try &#123;</span><br><span class="line">	        		while(true)</span><br><span class="line">	        		&#123;</span><br><span class="line">	        			Scanner input=new Scanner(System.in);</span><br><span class="line">	        		regist(input.nextInt());</span><br><span class="line">	        		&#125;</span><br><span class="line">	        		</span><br><span class="line">	        	&#125;catch(MyException e) &#123;</span><br><span class="line">	        		</span><br><span class="line">	        		System.out.println(e);</span><br><span class="line">	        	&#125;finally&#123;</span><br><span class="line">	        		System.out.print(&quot;本次登记操作结束&quot;);</span><br><span class="line">	        	&#125;</span><br><span class="line">	       &#125;</span><br><span class="line">	       public static void main(String args[])&#123;</span><br><span class="line">	    	   TestException t = new TestException();</span><br><span class="line">	    	   t.manager();</span><br><span class="line">	       &#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="FOUR"><a href="#FOUR" class="headerlink" title="FOUR"></a>FOUR</h2><p>AB两个人拥有同一个账户，两个人同时从这个账户取钱，假设账户已有钱数是10000元,A从柜台进行取钱，一次取300元,取后输出“A在柜台进行取钱，取了300元！目前账户还有XXX元”；B从ATM机进行取钱，一次取200元，取后输出“B从ATM机进行取钱，取了200元！目前账户还有XXX元”，直到账户钱数不足两人要取的数时，就不能取了，输出“余额不足。”，其中XXX是账户的余额数。</p>
+<p>编程用个线程模拟AB两个人的取钱过程，要求<br>（1）两个人都有取钱的过程；<br>（2）不能出现钱数不一致的问题。</p>
+<p>简单的线程同步互斥问题。</p>
+<p>银行类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Objects;</span><br><span class="line"></span><br><span class="line">public class Bank &#123;</span><br><span class="line">	// 假设一个账户有1000块钱  </span><br><span class="line">	static double money = 10000;</span><br><span class="line">	// 柜台Counter取钱的方法  </span><br><span class="line">	private void Counter(double money) &#123;</span><br><span class="line">		Bank.money -= money;</span><br><span class="line">		System.out.println(&quot;A在柜台取钱&quot; + money + &quot;元，还剩&quot; + Bank.money + &quot;元！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	// ATM取钱的方法  </span><br><span class="line">	private void ATM(double money) &#123;</span><br><span class="line">		Bank.money -= money;</span><br><span class="line">		System.out.println(&quot;B在ATM取钱&quot; + money + &quot;元，还剩&quot; + Bank.money + &quot;元！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//提供一个对外取款途径，防止直接调取方法同时取款时，并发余额显示错误</span><br><span class="line">	public synchronized void outMoney(double money, String mode) throws Exception&#123;</span><br><span class="line">		if(money &gt; Bank.money)&#123;</span><br><span class="line">			//校验余额是否充足</span><br><span class="line">			throw new Exception(&quot;取款金额&quot;+money+&quot;,余额只剩&quot;+Bank.money+&quot;，取款失败&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		if(Objects.equals(mode, &quot;ATM&quot;))&#123;</span><br><span class="line">			ATM(money);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			Counter(money);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PersonA类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class PersonA extends Thread &#123;</span><br><span class="line">	 </span><br><span class="line">	Bank bank;</span><br><span class="line">	</span><br><span class="line">	String mode;</span><br><span class="line"> </span><br><span class="line">	public PersonA(Bank bank, String mode) &#123;</span><br><span class="line">		this.mode = mode;</span><br><span class="line">		this.bank = bank;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public void run ()&#123;</span><br><span class="line">		while(bank.money &gt;= 300)&#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				bank.outMoney(300, mode);</span><br><span class="line">			&#125; catch (Exception e1) &#123;</span><br><span class="line">				// TODO Auto-generated catch block</span><br><span class="line">				e1.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			try &#123;</span><br><span class="line">				sleep(100);</span><br><span class="line">			&#125; catch (InterruptedException e) &#123;</span><br><span class="line">				// TODO Auto-generated catch block</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;余额不足！&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PersonB类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class PersonB extends Thread &#123;</span><br><span class="line">	Bank bank;</span><br><span class="line">	</span><br><span class="line">	String mode;</span><br><span class="line"> </span><br><span class="line">	public PersonB(Bank bank, String mode) &#123;</span><br><span class="line">		this.bank = bank;</span><br><span class="line">		this.mode = mode;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public void run() &#123;</span><br><span class="line">		while (bank.money &gt;= 200) &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				bank.outMoney(200, mode);</span><br><span class="line">			&#125; catch (Exception e1) &#123;</span><br><span class="line">				// TODO Auto-generated catch block</span><br><span class="line">				e1.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			try &#123;</span><br><span class="line">				sleep(100);</span><br><span class="line">			&#125; catch (InterruptedException e) &#123;</span><br><span class="line">				// TODO Auto-generated catch block</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Four &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Bank bank = new Bank();</span><br><span class="line">		// 实例化两个人，传入同一个银行的对象</span><br><span class="line">		PersonA a = new PersonA(bank, &quot;Counter&quot;);</span><br><span class="line">		PersonB b = new PersonB(bank, &quot;ATM&quot;);</span><br><span class="line">		a.start();</span><br><span class="line">		b.start();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="赵文博 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%AF%BC%E8%88%AA/" rel="tag"># 导航</a>
+              <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/03/%E4%B8%89%E8%A1%8C%E6%83%85%E8%AF%97/" rel="prev" title="三行情诗">
+                  <i class="fa fa-chevron-left"></i> 三行情诗
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/06/01/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E8%8B%B9%E6%9E%9C%E6%A9%98%E5%AD%90%E9%97%AE%E9%A2%98/" rel="next" title="操作系统之苹果橘子问题">
+                  操作系统之苹果橘子问题 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵文博</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60fd41c725a8ec1b" async="async"></script>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/src/click_show_text.js"></script>
+
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
