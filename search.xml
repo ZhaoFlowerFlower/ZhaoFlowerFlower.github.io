@@ -416,4 +416,17 @@
         <tag>分享</tag>
       </tags>
   </entry>
+  <entry>
+    <title>问题汇总</title>
+    <url>/2023/05/09/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><p>closing inbound before receiving peer’s close_notify<br>java连接数据库时发生以上错误提示<br>原因：数据库版本问题<br>解决：只需在数据库连接URL加useSSL=false即可。<br>参考链接：<a href="http://www.manongjc.com/detail/19-ejouaquyubmwspn.html">http://www.manongjc.com/detail/19-ejouaquyubmwspn.html</a></p>
+]]></content>
+      <categories>
+        <category>JAVA报错</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
 </search>
